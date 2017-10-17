@@ -54,7 +54,7 @@ The following questions will help you evaluate your current level of automation 
 
 ### Q1. How do you currently manage your infrastructure?
 
-1. Through a UI or CLI. This might seem like the easiest option for one-off tasks, but for recurring operations it is a big consumer of valuable engineering time.It's also difficult to track and manage changes.
+1. Through a UI or CLI. This might seem like the easiest option for one-off tasks, but for recurring operations it is a big consumer of valuable engineering time. It's also difficult to track and manage changes.
 2. Through reusable command line scripts, or a combination of UI and infrastructure as code. This is faster and more reliable than pure ad-hoc management and makes recurring operations repeatable, but the lack of consistency and versioning makes it difficult to manage over time.
 3. Through an infrastructure as code tool (Terraform, CloudFormation). Infrastructure as code enables scalable, repeatable, and versioned infrastructure. It dramatically increases the productivity of each operator and can enforce consistency across environments when used appropriately.
 4. Through a general-purpose automation framework (i.e. Jenkins + scripts / Jenkins + Terraform). This centralizes the management workflow, albeit with a tool that isn't built specifically for provisioning tasks.
@@ -69,7 +69,7 @@ The following questions will help you evaluate your current level of automation 
 
 1. Manual. Everything is manual, with no configuration management in place.
 2. Siloed. Each application team has its own way of managing infrastructure — some manually, some using infrastructure as code or custom scripts.
-3. Infrastructure as code with different code bases per environment.Having different code bases for infrastructure as code configurations can lead to untracked changes from one environment to the other if there is no promotion within environments.
+3. Infrastructure as code with different code bases per environment. Having different code bases for infrastructure as code configurations can lead to untracked changes from one environment to the other if there is no promotion within environments.
 4. Infrastructure as code with a single code base and differing environment variables. All resources, regardless of environment, are provisioned with the same code, ensuring that changes promote through your deployment tiers in a predictable way.
 
 ### Q4. How do teams collaborate and share infrastructure configuration and code?
@@ -77,13 +77,13 @@ The following questions will help you evaluate your current level of automation 
 1. N/A. Infrastructure as code is not used.
 2. Locally. Infrastructure configuration is hosted locally and shared via email, documents or spreadsheets.
 3. Ticketing system. Code is shared through journal entries in change requests or problem/incident tickets.
-4. Centralized without version control.Code is stored on a shared filesystem and secured through security groups. Changes are not versioned. Rollbacks are only possible through restores from backups or snapshots.
+4. Centralized without version control. Code is stored on a shared filesystem and secured through security groups. Changes are not versioned. Rollbacks are only possible through restores from backups or snapshots.
 5. Configuration stored and collaborated in a version control system (VCS) (Git repositories, etc.). Teams collaborate on infrastructure configurations within a VCS workflow, and can review infrastructure changes before they enter production. This is the most mature approach, as it offers the best record-keeping and cross-department/cross-team visibility.
 
 ### Q5. Do you use reusable modules for writing infrastructure as code?
 
 1. Everything is manual. No infrastructure as code currently used.
-2. No modularity.Infrastructure as code is used, but primarily as one-off configurations. Users usually don't share or re-use code.
+2. No modularity. Infrastructure as code is used, but primarily as one-off configurations. Users usually don't share or re-use code.
 3. Teams use modules internally but do not share them across teams.
 4. Modules are shared organization-wide. Similar to shared software libraries, a module for a common infrastructure pattern can be updated once and the entire organization benefits.
 
@@ -130,9 +130,9 @@ The following questions will help you assess the maturity of your change control
 
 ### Q10. How do you control users and objects hosted by your infrastructure provider (like logins, access and role control, etc.)?
 
-1. A common 'admin' or 'superuser' account shared by engineers.This increases the possibility of a breach into your infrastructure provider account.
+1. A common 'admin' or 'superuser' account shared by engineers. This increases the possibility of a breach into your infrastructure provider account.
 2. Individual named user accounts. This makes a loss of credentials less likely and easier to recover from, but it doesn't scale very well as the team grows.
-3. LDAP and/or Active Directory integration.This is much more secure than shared accounts, but requires additional architectural considerations to ensure that the provider's access into your corporate network is configured correctly.
+3. LDAP and/or Active Directory integration. This is much more secure than shared accounts, but requires additional architectural considerations to ensure that the provider's access into your corporate network is configured correctly.
 4. Single sign-on through OAuth or SAML. This provides token-based access into your infrastructure provider while not requiring your provider to have access to your corporate network.
 
 ### Q11. How do you track the changes made by different users in your infrastructure provider's environments?
@@ -143,7 +143,7 @@ The following questions will help you assess the maturity of your change control
 
 ### Q12. How is the access of former employees revoked?
 
-1. Immediately, manually.If you don't use infrastructure as code, the easiest and quickest way is by removing access for that employee manually using the infrastructure provider's console.
+1. Immediately, manually. If you don't use infrastructure as code, the easiest and quickest way is by removing access for that employee manually using the infrastructure provider's console.
 2. Delayed, as part of the next release. if your release process is extremely coupled and most of your security changes have to pass through a CAB (Change Advisory Board) meeting in order to be executed in production, this could be delayed.
 3. Immediately, writing a hot-fix in the infrastructure as code. this is the most secure and recommended option. Before the employee leaves the building, access must be removed.
 

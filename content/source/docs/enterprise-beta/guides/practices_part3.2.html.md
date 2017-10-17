@@ -23,7 +23,7 @@ Note: If you aren’t already using infrastructure as code for some portion of y
 
     Also, make sure to write down your organization’s expectations and socialize them widely among your teams.
 
-6. Create a repo that Terraform Enterprise will be able to access.Currently, Terraform Enterprise supports integrations with GitHub, GitLab and Atlassian Bitbucket (both Server and Cloud).
+6. Create a repo that Terraform Enterprise will be able to access. Currently, Terraform Enterprise supports integrations with GitHub, GitLab and Atlassian Bitbucket (both Server and Cloud).
 
 7. Start moving infrastructure code into version control. New Terraform code should all be going into version control; if you have existing Terraform code that’s outside version control, start moving it in so that everyone in your organization knows where to look for things and can track the history and purpose of changes.
 

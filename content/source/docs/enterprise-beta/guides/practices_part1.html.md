@@ -61,7 +61,7 @@ Contributors submit changes to workspaces by making updates to the infrastructur
 
 Workspace Contributors want a simple workflow to submit changes to a workspace and promote changes between workspaces. They can edit a subset of workspace variables and their own personal variables.
 
-Workspace contributors are often already familiar with Terraform's command line interface. TFE supports them by extending the Terraform CLI — for example, the `terraform push` command executes a run in TFE's environment instead of locally, using TFE's auditing and access control features.
+Workspace contributors are often already familiar with Terraform's operating model and command line interface, and can usually adapt quickly to TFE's web interface.
 
 ## The Optimal Terraform Workspace Structure
 
@@ -69,7 +69,7 @@ Workspace contributors are often already familiar with Terraform's command line 
 
 Terraform Enterprise's main unit of operation is a workspace. A workspace is a collection of everything Terraform needs to run: a Terraform configuration (usually from a VCS repo), values for that configuration's variables, and state data to keep track of operations between runs.
 
-In Terraform open source, a workspace is just a working directory. In TFE, they're persistent shared resources; you can assign them their own access controls, monitor their run states, and more.
+In Terraform open source, a workspace is just an independent state file on the local disk. In TFE, they're persistent shared resources; you can assign them their own access controls, monitor their run states, and more.
 
 ### One Workspace Per Environment Per Terraform Configuration
 

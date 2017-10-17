@@ -1,7 +1,7 @@
 ---
-page_title: "Temp title"
+page_title: "TODO"
 layout: "enterprise2"
-sidebar_current: "none"
+sidebar_current: "recommended"
 ---
 
 Table of contents:

@@ -1,6 +1,11 @@
+---
+page_title: "TODO"
+layout: "enterprise2"
+sidebar_current: "recommended"
+---
 
 
-# Part 1: Best Practices for Provisioning with Terraform Enterprise
+# Part 1: Recommended Practices for Provisioning Infrastructure
 
 Terraform's purpose is to provide one workflow to provision any infrastructure. In this section, we'll show you our recommended practices for organizing Terraform usage across a large organization. This is the set of practices that we call "collaborative infrastructure as code."
 

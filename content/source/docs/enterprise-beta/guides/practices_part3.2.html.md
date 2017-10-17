@@ -1,3 +1,9 @@
+---
+page_title: "TODO"
+layout: "enterprise2"
+sidebar_current: "recommended"
+---
+
 ## 3.2 Moving from Semi-Automated to Infrastructure as Code
 
 We define semi-automated provisioning as a mix of at least two of the following practices:

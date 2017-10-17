@@ -5,7 +5,7 @@ sidebar_current: "recommended"
 ---
 
 
-# Part 1: Recommended Practices for Provisioning Infrastructure
+# Part 1: An Overview of Our Recommended Workflow
 
 Terraform's purpose is to provide one workflow to provision any infrastructure. In this section, we'll show you our recommended practices for organizing Terraform usage across a large organization. This is the set of practices that we call "collaborative infrastructure as code."
 

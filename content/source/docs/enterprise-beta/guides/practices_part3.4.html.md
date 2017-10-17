@@ -4,7 +4,7 @@ layout: "enterprise2"
 sidebar_current: "recommended"
 ---
 
-## 3.4 Advanced Terraform Enterprise usage
+# Part 3.4: Advanced Improvements to Collaborative Infrastructure as Code
 
 Now that you have a collaborative interface and workflow for provisioning, you have a solid framework for improving your practices even further.
 
@@ -14,7 +14,7 @@ The following suggestions don’t have to be done in order, and some of them mig
 
 22. Adopt Packer for image creation. HashiCorp’s Packer helps you build golden images in a maintainable and repeatable way, and can amplify Terraform’s usefulness.
 
-23. Adopt integration and unit testing for infrastructure.Some tools you might want to consider include [serverspec](https://github.com/mizzy/serverspec), [Goss](https://github.com/aelsabbahy/goss), [InSpec](https://github.com/chef/inspec), and [rspec-terraform](https://github.com/bsnape/rspec-terraform/blob/master/README.md).
+23. Adopt integration and unit testing for infrastructure. Some tools you might want to consider include [serverspec](https://github.com/mizzy/serverspec), [Goss](https://github.com/aelsabbahy/goss), [InSpec](https://github.com/chef/inspec), and [rspec-terraform](https://github.com/bsnape/rspec-terraform/blob/master/README.md).
 
 24. Set up audit logs for TFE. Terraform Enterprise private installs send logs to CloudWatch by default.
 

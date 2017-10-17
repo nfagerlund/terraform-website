@@ -5,12 +5,10 @@ sidebar_current: "recommended"
 ---
 
 
-# Part 3: Progressing to Collaborative Infrastructure as Code
+# Part 3: How to Evolve Your Provisioning Practices
 
-## Introduction
+This section describes the steps necessary to move an organization from manual provisioning processes to a collaborative infrastructure as code workflow. For each stage of operational maturity, we give instructions for moving your organization to the next stage, eventually arriving at our recommended workflow.
 
-This section describes the steps necessary to move an organization from manual provisioning processes to a collaborative infrastructure as code workflow.
+We've split this section into multiple pages, so you can skip instructions that you've already implemented. Look back at your notes from Part 2, and start with the page about your current level of operational maturity.
 
-In this section we will go through each stage of maturity and list the steps necessary for an organization to move on to the next stage of maturity.
-
-
+TODO: links to sub-pages

@@ -4,7 +4,7 @@ layout: "enterprise2"
 sidebar_current: "recommended"
 ---
 
-## 3.3 Moving from Infrastructure as Code to Collaborative Infrastructure as Code
+# Part 3.3: Moving from Infrastructure as Code to Collaborative Infrastructure as Code
 
 Using version-controlled Terraform configurations to manage key infrastructure eliminates a great deal of technical complexity and inconsistency. Now that you have the basics under control, you’re ready to focus on other problems.
 

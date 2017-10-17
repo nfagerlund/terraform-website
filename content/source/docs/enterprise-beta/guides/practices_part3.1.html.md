@@ -4,7 +4,7 @@ layout: "enterprise2"
 sidebar_current: "recommended"
 ---
 
-## 3.1 Moving from Manual Changes to Semi-Automated
+# Part 3.1: How to Move from Manual Changes to Semi-Automation
 
 Building infrastructure manually (with CLI or GUI tools) results in infrastructure that is hard to audit, hard to reproduce, hard to scale, and hard to share knowledge about.
 

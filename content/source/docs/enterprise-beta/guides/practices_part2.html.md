@@ -13,6 +13,8 @@ We've written the section below in the form of a quiz or interview, with multipl
 
 This quiz doesn't have a passing or failing score, but it's important to know your organization's answers. Once you know which of your IT practices need the most attention, Section 3 will guide you from your current state to our recommended practices in the most direct way.
 
+## Four Levels of Operational Maturity
+
 Each question has several answers, each of which aligns with a different level of operational maturity. Those levels are as follows:
 
 1. **Manual**
@@ -20,19 +22,19 @@ Each question has several answers, each of which aligns with a different level o
     * Configuration changes do not leave a traceable history, and aren't always visible.
     * Limited or no naming standards in place.
 
-2. Semi-automated
+2. **Semi-automated**
     * Infrastructure is provisioned through a combination of UI/CLI, infrastructure as code, and scripts or configuration management.
     * Traceability is limited, since different record-keeping methods are used across the organization.
     * Rollbacks are hard to achieve due to differing record-keeping methods.
 
-3. Infrastructure as code
+3. **Infrastructure as code**
     * Infrastructure is provisioned using Terraform OSS.
     * Provisioning and deployment processes are automated.
     * Infrastructure configuration is consistent, with all necessary details fully documented (nothing siloed in a sysadmin's head).
     * Source files are stored in version control to record editing history, and, if necessary, roll back to older versions.
     * Some Terraform code is split out into modules, to promote consistent reuse of your organization's more common architectural patterns.
 
-4. Collaborative infrastructure as code
+4. **Collaborative infrastructure as code**
     * Users across the organization can safely provision infrastructure with Terraform, without conflicts and with clear understanding of their access permissions.
     * Expert users within an organization can produce standardized infrastructure templates, and beginner users can consume those to follow infrastructure best practices for the organization.
     * Per-workspace access control helps committers and approvers on workspaces protect production environments.

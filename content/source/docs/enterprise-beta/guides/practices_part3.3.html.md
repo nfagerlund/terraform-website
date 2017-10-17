@@ -48,11 +48,11 @@ Note: If you aren’t already using mature Terraform code to manage a significan
 
 17. Coming soon: specify custom workspace attributes. In an upcoming version of TFE, the organization owner will be able to create custom attributes, which can be given per-workspace values. Attributes will be fields like `Environment`, `Service`, `Business Unit`, `Region`, or `Datacenter`, and will help you filter and organize workspaces in a way that works better for large organizations. In today’s TFE, an `Environment` attribute is available on all workspaces, but custom attributes are not supported.
 
-18. Create or import users and teams. If your organization keeps user and team data in a directory server, use TFE’s SAML integration to import it. If you don’t, your colleagues must create their own TFE user accounts and ask to join your organization, and you can then add them to the appropriate teams.
+18. Create users and teams. Your colleagues must create their own TFE user accounts and ask to join your organization, and you can then add them to the appropriate teams.
 
-    TFE’s teams are lists of users that can be granted per-workspace permissions, which means your TFE teams need to match your understanding of who has which responsibilities for what infrastructure. That might not be an exact match for your org chart, so you might need to add some extra information to your employee directory in order to map TFE teams effectively. Keep in mind:
+    TFE’s teams are lists of users that can be granted per-workspace permissions, which means your TFE teams should match your understanding of who's responsible for which infrastructure. That isn't always an exact match for your org chart, so make sure you spend some time thinking about this and talking to people across the organization. Keep in mind:
 
-    * Some teams will need to administer many workspaces, and others only need permissions on one or two.
+    * Some teams need to administer many workspaces, and others only need permissions on one or two.
     * A team might not have the same permissions on every workspace they use; for example, application developers might have read/write access to their app’s dev and stage environments, but read-only access to prod.
 
     Managing an accurate and complete map of how responsibilities are delegated is one of the most difficult parts of practicing collaborative infrastructure as code.

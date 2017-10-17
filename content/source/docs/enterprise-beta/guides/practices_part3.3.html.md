@@ -27,16 +27,16 @@ Note: If you aren’t already using mature Terraform code to manage a significan
     * Read the documentation on how to [perform and configureTerraform runs](https://www.terraform.io/docs/enterprise-beta/getting-started/runs.html) in Terraform Enterprise.
     * Create a proof-of-concept workspace, associate it with Terraform code in a VCS repo, set variables as needed, and use Terraform Enterprise to perform some Terraform runs with that code.
 
-15. Design your organization’s workspace structure. In TFE, each environment of a given component should be a separate workspace — in other words, components * environments = workspaces. A workspace name should be something like “networking-dev,” so you can tell at a glance which component and environment it manages.
+15. Design your organization’s workspace structure. In TFE, each Terraform configuration should manage a speciic infrastructure component, and each environment of a given configuration should be a separate workspace — in other words, Terraform configurations * environments = workspaces. A workspace name should be something like “networking-dev,” so you can tell at a glance which infrastructure and environment it manages.
 
-    The definition of a “component” depends on your organization’s structure. A given workspace might manage an application, a service, or a group of related services; it might provision infrastructure used by a single engineering team, or it might provision shared, foundational infrastructure used by the entire business.
+    The definition of an “infrastructure component” depends on your organization’s structure. A given workspace might manage an application, a service, or a group of related services; it might provision infrastructure used by a single engineering team, or it might provision shared, foundational infrastructure used by the entire business.
 
     You should structure your workspaces to match the divisions of responsibility in your infrastructure. You will probably end up with a mixture: some components, like networking, are foundational infrastructure controlled by central IT staff; others are application-specific and should be controlled by the engineering teams that rely on them.
 
     Also, keep in mind:
 
     * Some workspaces publish output data to be used by other workspaces.
-    * The workspaces that make up a component’s environments (app1-dev, app1-stage, app1-prod) should be run in order, to ensure code is properly verified.
+    * The workspaces that make up a configuration’s environments (app1-dev, app1-stage, app1-prod) should be run in order, to ensure code is properly verified.
 
     The first relationship, a relationship between workspaces for different components but the same environment, creates a graph of dependencies between workspaces, and you should stay aware of it. The second relationship, a relationship between workspaces for the same component but different environments, creates a pipeline between workspaces. TFE doesn’t currently have the ability to act on these dependencies, but features like cascading updates and promotion are coming soon, and you’ll be able to use them more easily if you already understand how your workspaces relate.
 

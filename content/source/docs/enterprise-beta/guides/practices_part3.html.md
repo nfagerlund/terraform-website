@@ -102,7 +102,7 @@ Note: If you aren’t already using mature Terraform code to manage a significan
     TFE does things differently: a workspace is associated directly with a VCS repo, and you use TFE’s UI or API to start and monitor runs. To get familiar with this operating model:
 
     * Read the documentation on how to [perform](https://www.terraform.io/docs/enterprise/runs/starting.html) and [configure](https://www.terraform.io/docs/enterprise/runs/variables-and-configuration.html) Terraform runs in Terraform Enterprise.
-    * Create a proof-of-concept workspace, associate it with a Terraform codebase in a VCS repo, set variables as needed, and use Terraform Enterprise to perform some Terraform runs with that codebase.
+    * Create a proof-of-concept workspace, associate it with Terraform code in a VCS repo, set variables as needed, and use Terraform Enterprise to perform some Terraform runs with that code.
 
 15. Design your organization’s workspace structure. In TFE, each environment of a given component should be a separate workspace — in other words, components * environments = workspaces. A workspace name should be something like “networking-dev,” so you can tell at a glance which component and environment it manages.
 

@@ -102,7 +102,7 @@ The following questions will help you assess the maturity of your change control
 ### Q7. What is the process for changing existing infrastructure?
 
 1. Manual changes by remotely logging into machines. Repetitive manual tasks are inefficient and prone to human errors.
-2. Runtime configuration management (Puppet, Chef, etc.). Configuration management tools let you make fast, automated changes based on a readable and auditable codebase. However, since they don't produce static artifacts, the outcome of a given configuration version isn't always 100% repeatable, making rollbacks only partially reliable.
+2. Runtime configuration management (Puppet, Chef, etc.). Configuration management tools let you make fast, automated changes based on readable and auditable code. However, since they don't produce static artifacts, the outcome of a given configuration version isn't always 100% repeatable, making rollbacks only partially reliable.
 3. Immutable infrastructure (images, containers). Immutable components can be replaced for every deployment (rather than being updated in-place), using static deployment artifacts. If you maintain sharp boundaries between ephemeral layers and state-storing layers, immutable infrastructure can be much easier to test, validate, and roll back.
 
 ### Q8. How do you deploy applications?

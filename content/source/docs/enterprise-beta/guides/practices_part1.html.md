@@ -18,9 +18,9 @@ There are two major challenges everyone faces when trying to improve their provi
 
     To delegate a large application, companies often split it into small, focused microservice components that are owned by specific teams. Each microservice provides an API, and as long as those APIs don't change, microservice teams can make changes in parallel despite relying on each others' functionality.
 
-    Similarly, infrastructure code can be split into smaller Terraform codebases, which have limited scope and are owned by specific teams. These independent Terraform codebases use [output variables](https://www.terraform.io/docs/configuration/outputs.html)to publish information and [remote state resources](https://www.terraform.io/docs/providers/terraform/d/remote_state.html)to access output data from other workspaces. Just like microservices communicate and connect via APIs, Terraform workspaces connect via remote state.
+    Similarly, infrastructure code can be split into smaller Terraform configurations, which have limited scope and are owned by specific teams. These independent configurations use [output variables](https://www.terraform.io/docs/configuration/outputs.html)to publish information and [remote state resources](https://www.terraform.io/docs/providers/terraform/d/remote_state.html)to access output data from other workspaces. Just like microservices communicate and connect via APIs, Terraform workspaces connect via remote state.
 
-    Once you have loosely-coupled Terraform codebases, you can delegate their development and maintenance to different teams. To do this effectively, you need to control access to these codebases. Version control systems can regulate who can commit code, but since Terraform affects real infrastructure, you also need to regulate who can run the code.
+    Once you have loosely-coupled Terraform configurations, you can delegate their development and maintenance to different teams. To do this effectively, you need to control access to that code. Version control systems can regulate who can commit code, but since Terraform affects real infrastructure, you also need to regulate who can run the code.
 
     This is how Terraform Enterprise (TFE) solves the organizational complexity of provisioning: by providing a centralized run environment for Terraform that supports and enforces your organization's access control decisions across all workspaces. This helps you delegate infrastructure ownership to enable parallel development.
 
@@ -42,13 +42,13 @@ Organization Architects want a single dashboard to view the status of all worksp
 
 ### Workspace Owner
 
-This individual owns a specific set of workspaces, which build a given Terraform codebase across several environments. They are responsible for the health of those workspaces, managing the full change lifecycle through dev, UAT, staging, and production. They are the main approver of changes to production within their domain.
+This individual owns a specific set of workspaces, which build a given Terraform configuration across several environments. They are responsible for the health of those workspaces, managing the full change lifecycle through dev, UAT, staging, and production. They are the main approver of changes to production within their domain.
 
 Workspace Owners want:
 
-* A single dashboard to view the status of all workspaces that use their infrastructure codebase.
+* A single dashboard to view the status of all workspaces that use their infrastructure code.
 * A streamlined way to promote changes between environments.
-* An interface to set variables used by a codebase across environments.
+* An interface to set variables used by a Terraform configuration across environments.
 
 ### Workspace Contributor
 
@@ -62,17 +62,17 @@ Workspace contributors are often already familiar with Terraform's command line 
 
 ### About Workspaces
 
-Terraform Enterprise's main unit of operation is a workspace. A workspace is a collection of everything Terraform needs to run: a codebase (usually from a VCS repo), values for that code's variables, and state data to keep track of operations between runs.
+Terraform Enterprise's main unit of operation is a workspace. A workspace is a collection of everything Terraform needs to run: a Terraform configuration (usually from a VCS repo), values for that configuration's variables, and state data to keep track of operations between runs.
 
 In Terraform open source, a workspace is just a working directory. In TFE, they're persistent shared resources; you can assign them their own access controls, monitor their run states, and more.
 
-### One Workspace Per Environment Per Codebase
+### One Workspace Per Environment Per Terraform Configuration
 
-Workspaces are TFE's primary tool for delegating control, which means their structure should match your organizational permissions structure. The best approach is to use one workspace for each environment of a given infrastructure component. Or in other words, codebases * environments = workspaces.
+Workspaces are TFE's primary tool for delegating control, which means their structure should match your organizational permissions structure. The best approach is to use one workspace for each environment of a given infrastructure component. Or in other words, Terraform configurations * environments = workspaces.
 
-This is different from how some other tools view environments; notably, you shouldn't use a single Terraform workspace to manage everything that makes up your production or staging environment. Instead, make smaller workspaces that are easy to delegate. This also means not every codebase has to use the exact same environments; if a UAT environment doesn't make sense for your security infrastructure, you aren't forced to use one.
+This is different from how some other tools view environments; notably, you shouldn't use a single Terraform workspace to manage everything that makes up your production or staging environment. Instead, make smaller workspaces that are easy to delegate. This also means not every configuration has to use the exact same environments; if a UAT environment doesn't make sense for your security infrastructure, you aren't forced to use one.
 
-Name your workspaces with both their component and their environment. For example, if you have a Terraform codebase for managing an internal billing app and another codebase for your networking infrastructure, you could name the workspaces as follows:
+Name your workspaces with both their component and their environment. For example, if you have a Terraform configuration for managing an internal billing app and another for your networking infrastructure, you could name the workspaces as follows:
 
 * billing-app-dev
 * billing-app-stage
@@ -96,7 +96,7 @@ To use TFE effectively, you must make sure the division of workspaces and permis
 
 In a future version, TFE will let you create promotion pipelines across workspaces.
 
-As we described above, each workspace is a specific environment of a given codebase. Today, you must handle code promotion manually, by switching the code used in a higher environment to match the code that successfully passed the prior environment.
+As we described above, each workspace is a specific environment of a given Terraform configuration. Today, you must handle code promotion manually, by switching the code used in a higher environment to match the code that successfully passed the prior environment.
 
 But soon, you'll be able to set up promotion relationships, so instead of checking out code directly from version control, a higher environment can accept code directly from a prior environment. This can help provide a guarantee that high environments are only run with known good code.
 

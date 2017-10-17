@@ -103,7 +103,7 @@ In a future version, TFE will let you create promotion pipelines across workspac
 
 As we described above, each workspace is a specific environment of a given Terraform configuration. Today, you must handle code promotion manually, by switching the code used in a higher environment to match the code that successfully passed the prior environment.
 
-But soon, you'll be able to set up promotion relationships, so instead of checking out code directly from version control, a higher environment can accept code directly from a prior environment. This can help provide a guarantee that high environments are only run with known good code.
+Later, you'll be able to set up promotion relationships, so instead of checking out code directly from version control, a higher environment can accept code directly from a prior environment. This can help provide a guarantee that high environments only run known good code.
 
 ## Variable and Policy Management
 

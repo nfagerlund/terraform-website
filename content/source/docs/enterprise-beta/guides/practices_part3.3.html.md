@@ -46,8 +46,6 @@ Note: If you aren’t already using mature Terraform code to manage a significan
 
     ![diagram](images/image1.png)
 
-17. Coming soon: specify custom workspace attributes. In an upcoming version of TFE, the organization owner will be able to create custom attributes, which can be given per-workspace values. Attributes will be fields like `Environment`, `Service`, `Business Unit`, `Region`, or `Datacenter`, and will help you filter and organize workspaces in a way that works better for large organizations. In today’s TFE, an `Environment` attribute is available on all workspaces, but custom attributes are not supported.
-
 18. Create users and teams. Your colleagues must create their own TFE user accounts and ask to join your organization, and you can then add them to the appropriate teams.
 
     TFE’s teams are lists of users that can be granted per-workspace permissions, which means your TFE teams should match your understanding of who's responsible for which infrastructure. That isn't always an exact match for your org chart, so make sure you spend some time thinking about this and talking to people across the organization. Keep in mind:

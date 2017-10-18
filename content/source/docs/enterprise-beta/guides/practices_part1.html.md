@@ -63,11 +63,11 @@ Workspace Contributors want a simple workflow to submit changes to a workspace a
 
 Workspace contributors are often already familiar with Terraform's operating model and command line interface, and can usually adapt quickly to TFE's web interface.
 
-## The Optimal Terraform Workspace Structure
+## The Recommended Terraform Workspace Structure
 
 ### About Workspaces
 
-Terraform Enterprise's main unit of operation is a workspace. A workspace is a collection of everything Terraform needs to run: a Terraform configuration (usually from a VCS repo), values for that configuration's variables, and state data to keep track of operations between runs.
+Terraform Enterprise's main unit of organization is a workspace. A workspace is a collection of everything Terraform needs to run: a Terraform configuration (usually from a VCS repo), values for that configuration's variables, and state data to keep track of operations between runs.
 
 In Terraform open source, a workspace is just an independent state file on the local disk. In TFE, they're persistent shared resources; you can assign them their own access controls, monitor their run states, and more.
 
@@ -122,4 +122,3 @@ Per-workspace variables. Most variables are stored at the workspace level; this 
 ### User
 
 Variables attached to a specific user, which are used in all workspaces and which override workspace variables. For example, each user can be associated with their ARN.
-

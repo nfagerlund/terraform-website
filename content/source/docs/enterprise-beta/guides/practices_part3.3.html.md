@@ -14,7 +14,7 @@ Your next goals are to:
 * Expand the benefits of Terraform beyond the core of engineers who directly edit Terraform code.
 * Manage infrastructure provisioning permissions for users and teams.
 
-Terraform Enterprise (TFE) is the tool we’ve built to help you address these next-level problems. The following section describes how to start using it most effectively.
+[Terraform Enterprise (TFE)](https://www.hashicorp.com/products/terraform/) is the product we’ve built to help you address these next-level problems. The following section describes how to start using it most effectively.
 
 Note: If you aren’t already using mature Terraform code to manage a significant portion of your infrastructure, make sure you follow the steps in the previous section first.
 

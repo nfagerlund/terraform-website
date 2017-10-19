@@ -31,7 +31,7 @@ Note: If you aren’t already using infrastructure as code for some portion of y
 
     The diagram below can help you decide when to write a module:
 
-    ![Screen Shot 2017-06-19 at 10.22.11.png](images/image2.png)
+    ![Screen Shot 2017-06-19 at 10.22.11.png](./images/image2.png)
 
 9. Spread Terraform skills to additional teams, and improve the skills of existing infrastructure teams. In addition to internal training and self-directed learning, you might want to consider:
 

@@ -44,7 +44,7 @@ Note: If you aren’t already using mature Terraform code to manage a significan
 
     We recommend using the same repository and branch for every environment of a given app or service — write your Terraform code such that you can differentiate the environments via variables, and set those variables appropriately per workspace. This might not be practical for your existing code yet, in which case you can use different branches per workspace and handle promotion through your merge strategy, but we believe a model of one canonical branch works best.
 
-    ![diagram](images/image1.png)
+    ![diagram](./images/image1.png)
 
 18. Create users and teams. Your colleagues must create their own TFE user accounts and ask to join your organization, and you can then add them to the appropriate teams.
 

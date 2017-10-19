@@ -1,7 +1,7 @@
 ---
-page_title: "TODO"
-layout: "enterprise2"
-sidebar_current: "recommended"
+page_title: "Part 3.2: From Semi-Automation to Infrastructure as Code - Terraform Recommended Practices"
+layout: "guides"
+sidebar_current: "recommended-practices-3-2"
 ---
 
 # Part 3.2: Moving from Semi-Automation to Infrastructure as Code

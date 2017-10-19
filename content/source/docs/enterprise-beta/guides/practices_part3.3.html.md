@@ -1,7 +1,7 @@
 ---
-page_title: "TODO"
-layout: "enterprise2"
-sidebar_current: "recommended"
+page_title: "Part 3.3: From Infrastructure as Code to Collaborative Infrastructure as Code - Terraform Recommended Practices"
+layout: "guides"
+sidebar_current: "recommended-practices-3-3"
 ---
 
 # Part 3.3: Moving from Infrastructure as Code to Collaborative Infrastructure as Code

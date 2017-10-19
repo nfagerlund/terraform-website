@@ -1,7 +1,7 @@
 ---
-page_title: "TODO"
-layout: "enterprise2"
-sidebar_current: "recommended"
+page_title: "Part 3.1: From Manual Changes to Semi-Automation - Terraform Recommended Practices"
+layout: "guides"
+sidebar_current: "recommended-practices-3-1"
 ---
 
 # Part 3.1: How to Move from Manual Changes to Semi-Automation

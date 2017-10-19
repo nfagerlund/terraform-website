@@ -1,7 +1,7 @@
 ---
-page_title: "TODO"
-layout: "enterprise2"
-sidebar_current: "recommended"
+page_title: "Part 3.4: Advanced Workflow Improvements - Terraform Recommended Practices"
+layout: "guides"
+sidebar_current: "recommended-practices-3-4"
 ---
 
 # Part 3.4: Advanced Improvements to Collaborative Infrastructure as Code

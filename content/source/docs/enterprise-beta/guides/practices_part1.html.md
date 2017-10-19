@@ -1,7 +1,7 @@
 ---
-page_title: "TODO"
-layout: "enterprise2"
-sidebar_current: "recommended"
+page_title: "Part 1: Overview of Our Recommended Workflow - Terraform Recommended Practices"
+layout: "guides"
+sidebar_current: "recommended-practices-1"
 ---
 
 

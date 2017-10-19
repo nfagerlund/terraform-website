@@ -1,7 +1,7 @@
 ---
 page_title: "Part 3: How to Evolve Your Provisioning Practices - Terraform Recommended Practices"
 layout: "guides"
-sidebar_current: "recommended-practices-3"
+sidebar_current: "recommended-practices-3-0"
 ---
 
 

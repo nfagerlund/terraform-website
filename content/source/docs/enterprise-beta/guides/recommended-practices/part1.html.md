@@ -122,3 +122,7 @@ Per-workspace variables. Most variables are stored at the workspace level; this 
 ### User
 
 Variables attached to a specific user, which are used in all workspaces and which override workspace variables. For example, each user can be associated with their ARN.
+
+## Next
+
+Now that you're familiar with the outlines of the Terraform Enterprise workflow, it's time to assess your organization's provisioning practices. Continue on to [Part 2: Evaluating Your Current Provisioning Practices](./part2.html).

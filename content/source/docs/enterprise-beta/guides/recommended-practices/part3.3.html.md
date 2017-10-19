@@ -4,7 +4,7 @@ layout: "guides"
 sidebar_current: "recommended-practices-3-3"
 ---
 
-# Part 3.3: Moving from Infrastructure as Code to Collaborative Infrastructure as Code
+# Part 3.3: How to Move from Infrastructure as Code to Collaborative Infrastructure as Code
 
 Using version-controlled Terraform configurations to manage key infrastructure eliminates a great deal of technical complexity and inconsistency. Now that you have the basics under control, you’re ready to focus on other problems.
 
@@ -71,3 +71,7 @@ Note: If you aren’t already using mature Terraform code to manage a significan
     As long as no one can bypass Terraform, your code review processes and your TFE workspace permissions are the definitive record of who can modify which infrastructure. This makes everything about your infrastructure more knowable and controllable. Terraform Enterprise is one workflow to learn, one workflow to secure, and one workflow to audit for provisioning any infrastructure in your organization.
 
 At this point, you have successfully adopted a collaborative infrastructure as code workflow with Terraform Enterprise. You can provision infrastructure across multiple providers using a single workflow, and you have a shared interface that helps manage your organization’s standards around access control and code promotion.
+
+## Next
+
+Now that you're using an advanced collaborative workflow, there are additional improvements you can make. Continue on to [Part 3.4: Advanced Improvements to Collaborative Infrastructure as Code](./part3.4.html).

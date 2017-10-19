@@ -153,3 +153,6 @@ After reviewing all of these questions, look back at your notes and assess your 
 
 Keep your current state in mind as you read the next section.
 
+## Next
+
+Now that you've taken a hard look at your current practices, it's time to begin improving them. Continue on to [Part 3: How to Evolve Your Provisioning Practices](./part3.html).

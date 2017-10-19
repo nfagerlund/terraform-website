@@ -23,3 +23,6 @@ Allow one individual (or a small group) in your engineering team to get familiar
 
 At this point, you’ve reached a semi-automated stage of provisioning practices — one or more people in the organization can write Terraform code to provision and modify resources, and a small but meaningful subset of your infrastructure is being managed as code. This is a good time to provide a small demo to the rest of team to show how easy it is to write and provision infrastructure with Terraform.
 
+## Next
+
+Once you've partially automated your provisioning practices, it's time to transition to a more complete infrastructure as code workflow. Continue on to [Part 3.2: How to Move from Semi-Automation to Infrastructure as Code](./part3.2.html).

@@ -4,7 +4,7 @@ layout: "guides"
 sidebar_current: "recommended-practices-3-2"
 ---
 
-# Part 3.2: Moving from Semi-Automation to Infrastructure as Code
+# Part 3.2: How to Move from Semi-Automation to Infrastructure as Code
 
 We define semi-automated provisioning as a mix of at least two of the following practices:
 
@@ -55,3 +55,7 @@ Here are a few examples of good build patterns from several cloud providers:
 12. Integrate with [Vault](https://www.terraform.io/docs/providers/vault/index.html) or another secret management tool. Secrets like service provider credentials must stay secret, but they also must be easy to use when needed. The best way to address those needs is to use a dedicated secret management tool. We believe HashiCorp’s Vault is the best choice for most people, but Terraform can integrate with other secret management tools as well.
 
 At this point, your organization has a VCS configured, is managing key infrastructure with Terraform, and has at least one reusable Terraform module. Compared to a semi-automated practice, your organization has much better visibility into infrastructure configuration, using a consistent language and workflow.
+
+## Next
+
+Now that you're managing key infrastructure with Terraform, you need an advanced workflow that can scale and delegate responsibilities to many contributors. Continue on to [Part 3.3: How to Move from Infrastructure as Code to Collaborative Infrastructure as Code](./part3.3.html).

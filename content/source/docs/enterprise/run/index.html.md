@@ -116,3 +116,32 @@ TFE uses [the `atlas` backend](/docs/backends/types/terraform-enterprise.html) t
 
 When TFE performs a run, it doesn't use existing user credentials; instead it generates a unique per-run API token, and exports it to the Terraform worker's shell environment as `$ATLAS_TOKEN`. This per-run token can read and write state data for the workspace associated with the run, and can read state data from any other workspace in the same organization. It cannot make any other calls to the TFE API. Per-run tokens are not considered to be user, team, or organization tokens, and become invalid after the run is completed.
 
+## Run Environment
+
+TFE performs Terraform runs on disposable Linux worker VMs using a POSIX-compatible shell. Before running Terraform, TFE populates the shell with environment variables using the `export` command.
+
+The environment variables in the worker VM include any [workspace environment variables](../workspaces/variables.html), plus several variables that TFE itself sets. In almost all cases, you should avoid setting workspace environment variables that conflict with these pre-set variables.
+
+The following is a list of TFE's pre-set environment variables. The full set isn't necessarily set for every run.
+
+Name(s) | Description
+--|--
+`TFE_TOKEN` / `ATLAS_TOKEN` | The unique per-run API token for this run. Used by the state backend to read/write state in the run's workspace and read state from other workspaces.
+`CHECKPOINT_DISABLE` | Set to `1` to support running Terraform in an automated environment.
+`TF_INPUT` | Set to `0` to support running Terraform in an automated environment.
+`TF_APPEND_USER_AGENT` | Reserved for internal use.
+`TFE_PARALLELISM` / `TF_ATLAS_PARALLELISM` | Reserved for internal use.
+`TFE_ADDRESS` / `ATLAS_ADDRESS` | The hostname of this TFE instance.
+
+
+Omitting:
+
+- `TF_ATLAS_DIR` (in the struct now?)
+- `ATLAS_RUN_ID` (struct?)
+- `ATLAS_CONFIGURATION_NAME` (can't tell the status of this?)
+- `ATLAS_CONFIGURATION_SLUG` (possibly coalesced into `SlugAddress` in the struct?)
+- `ATLAS_CONFIGURATION_VERSION` (is this `Version` in the struct?)
+- `ATLAS_CONFIGURATION_VERSION_GITHUB_BRANCH` (For this and the other two, models/runtime/run.rb makes it look like we're probably still setting them, but the name is obsolete, and they seem unlikely to stick around and be supportable in this form...?)
+- `ATLAS_CONFIGURATION_VERSION_GITHUB_COMMIT_SHA`
+- `ATLAS_CONFIGURATION_VERSION_GITHUB_TAG`
+

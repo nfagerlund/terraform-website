@@ -39,7 +39,7 @@ When creating or editing a policy, the following fields are available:
 
 - **Policy Name:** The name of the policy, which is used in the UI and Sentinel output. Accepts letters, numbers, `-`, and `_`. (Names cannot be modified after creation, and this field is disabled when editing an existing policy.)
 - **Description:** A brief note about the policy's purpose, displayed in the policy list.
-- **Enforcement Mode:** The level to which the policy is enforced when performing a run. The following modes are available:
+- **Enforcement Mode:** How the policy is enforced when performing a run. The following modes are available:
   - **hard-mandatory (cannot override):** This policy is required on all Terraform runs. It cannot be overridden by any users.
   - **soft-mandatory (can override):** This policy is required, but organization owners can override the policy and allow a non-compliant run to continue.
   - **advisory (logging only):** This policy will allow the run to continue regardless of whether it passes or fails.

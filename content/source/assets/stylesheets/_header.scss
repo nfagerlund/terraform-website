@@ -122,12 +122,15 @@
           clear: both;
           width: 100%;
           display: block;
-          padding: 1rem;
+          padding-top: 0;
           position: relative;
           height: 44px;
+          line-height: 44px; // Centers text, limited to single line.
 
           a {
             text-decoration: none;
+            display: block;
+            height: 100%;
           }
         }
       }

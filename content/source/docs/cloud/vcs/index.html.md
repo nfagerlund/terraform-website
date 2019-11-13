@@ -5,7 +5,7 @@ page_title: "Connecting VCS Providers - Terraform Cloud"
 
 # Connecting VCS Providers to Terraform Cloud
 
-Terraform Cloud is more powerful when you integrate it with your version control system (VCS) provider. Although you can use almost all of Terraform Cloud's features without one, a VCS connection provides major workflow benefits. In particular:
+Terraform Cloud is more powerful when you integrate it with your version control system (VCS) provider. Although you can use many of Terraform Cloud's features without one, a VCS connection provides additional features and improved workflows. In particular:
 
 - When workspaces are linked to a VCS repository, Terraform Cloud can [automatically initiate Terraform runs](../run/ui.html) when changes are committed to the specified branch.
 - Terraform Cloud makes code review easier by [automatically predicting](../run/ui.html#speculative-plans-on-pull-requests) how pull requests will affect infrastructure.
@@ -17,7 +17,8 @@ We recommend configuring VCS access when first setting up an organization, and y
 
 Terraform Cloud supports the following VCS providers:
 
-- [GitHub](./github.html)
+- [GitHub.com (simple)](./github-app.html)
+- [GitHub.com (custom)](./github.html)
 - [GitHub Enterprise](./github-enterprise.html)
 - [GitLab.com](./gitlab-com.html)
 - [GitLab EE and CE](./gitlab-eece.html)

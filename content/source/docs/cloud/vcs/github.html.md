@@ -1,9 +1,9 @@
 ---
 layout: "cloud"
-page_title: "GitHub - VCS Providers - Terraform Cloud"
+page_title: "GitHub.com (OAuth) - VCS Providers - Terraform Cloud"
 ---
 
-# Configuring GitHub Access
+# Configuring GitHub.com Access (OAuth)
 
 These instructions are for using GitHub.com for Terraform Cloud's VCS features. [GitHub Enterprise has separate instructions,](./github-enterprise.html) as do the [other supported VCS providers.](./index.html)
 

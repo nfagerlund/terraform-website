@@ -15,13 +15,19 @@ Workspaces are how Terraform Cloud organizes infrastructure. You'll create new w
 New workspaces can be created by:
 
 - [The owners team](../users-teams-organizations/teams.html#the-owners-team).
-- Teams that have the [manage workspaces](../users-teams-organizations/permissions.html#manage-workspaces) permission.
+- Teams with the [manage workspaces](../users-teams-organizations/permissions.html#manage-workspaces) permission.
 
 ## Configuring a New Workspace
 
-To start creating a new workspace, use the "+ New Workspace" button, which appears above the list of workspaces. You can navigate to the workspace list with the "Workspaces" button in the top navigation bar.
+To start creating a new workspace, [navigate to the workspace list](./index.html#listing-and-filtering-workspaces) and click the "+ New Workspace" button near the top of the page. Follow the instructions to configure the workspace's basic settings, then confirm creation.
 
-Next, on the "Create a New Workspace" page, configure the workspace's basic settings. Every workspace needs a unique name, and needs to specify where its Terraform configuration comes from (usually a VCS repository).
+Every workspace needs a unique name, and must specify where its Terraform configuration will come from.
+
+
+
+The new workspace page is split into multiple screens
+
+Most workspaces should get their configuration from a VCS repository.
 
 ![Screenshot: The "create a new workspace" page, on the version control provider screen.](./images/creating-vcs-provider.png)
 

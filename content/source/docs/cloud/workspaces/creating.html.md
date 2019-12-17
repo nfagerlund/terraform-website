@@ -21,7 +21,18 @@ New workspaces can be created by:
 
 To start creating a new workspace, [navigate to the workspace list](./index.html#listing-and-filtering-workspaces) and click the "+ New Workspace" button near the top of the page. Follow the instructions to configure the workspace's basic settings, then confirm creation.
 
-Every workspace needs a unique name, and must specify where its Terraform configuration will come from.
+Each new workspace needs a unique (per organization) name.  must specify whether its Terraform configuration will come from version control, and . All of these settings can be changed later if necessary.
+
+### Configuration Source
+
+If Terraform Cloud will perform Terraform runs in a workspace, that workspace requires a Terraform configuration. Since this configuration is expected to change over time, Terraform Cloud views it as a series of _configuration versions._
+
+Workspaces can get configuration versions in two ways:
+
+- From a VCS repository. The workspace gets webhook notifications when a new configuration is available, and can automatically download the new code and queue a plan.
+- From any other source. Configurations can be uploaded via the API or via Terraform CLI, and new configurations must be explicitly uploaded after changes are made.
+
+Most of the "create a new workspace" page is devoted to specifying how to find the workspace's Terraform configuration in a VCS repository.
 
 
 

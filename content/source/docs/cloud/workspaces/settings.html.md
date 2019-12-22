@@ -41,6 +41,16 @@ The display name of the workspace.
 
 ~> **Important:** Since some API calls refer to a workspace by its name, changing the name can sometimes break existing integrations.
 
+### Execution Mode
+
+[remote backend]: /docs/backends/types/remote.html
+
+Whether to use Terraform Cloud as the Terraform execution platform for this workspace.
+
+The default value is "Remote", which instructs Terraform Cloud to perform Terraform runs on its own disposable virtual machines. This provides a consistent and reliable run environment, and enables advanced features like Sentinel policy enforcement, cost estimation, notifications, version control integration, and more.
+
+To disable remote execution for a workspace, change its execution mode to "Local". The workspace will store state, which Terraform can access using the [remote backend][].
+
 ### Auto Apply and Manual Apply
 
 Whether or not Terraform Cloud should automatically apply a successful Terraform plan. If you choose manual apply, an operator must confirm a successful plan and choose to apply it.
@@ -117,13 +127,26 @@ See [Managing Access to Workspaces](./access.html) for detailed information.
 
 ## Version Control
 
-The "Version Control" page configures the VCS repository (if any) that contains the workspace's Terraform configuration.
+The "Version Control" page configures the VCS repository (if any) that contains the workspace's Terraform configuration. Version control integration is only relevant for workspaces with [remote execution](#execution-mode) enabled. For more information about version control integration, see [The UI- and VCS-driven Run Workflow](../run/ui.html).
 
-After changing any of these settings, you must click the "Update VCS settings" button at the bottom of the page.
+For most of these settings, you must save any changes with the "Update VCS settings" button at the bottom of the page.
 
 ### VCS Connection and Repository
 
-You can use the "Select a VCS connection" buttons and "Repository" field to change which VCS repository the workspace gets configurations from. To remove an already configured VCS connection, use the "skip this step" link instead of one of the VCS buttons. See also:
+The first item on the "Version Control" page lets you select a new VCS repository or disconnect the workspace from its current repository.
+
+-> **Note:** Depending on the current status, this control may appear as a "Connect to version control" button or a "Change VCS connection" link.
+
+Connecting or disconnecting a VCS repository takes you to a separate page, split into three screens:
+
+- On the first screen, choose your VCS provider (or choose "No VCS connection" if you wish to disconnect the workspace from version control).
+    - This screen also includes a "Connect to a different VCS" link, which reveals shortcuts for adding a new VCS provider to your organization. See [Connecting VCS Providers](../vcs/index.html) for more information.
+- On the second screen, choose the repository to use. (This screen is skipped when removing a VCS connection.) The repository list includes a text field for filtering, and sometimes includes a drop-down for switching the active VCS organization.
+- On the third screen, confirm or cancel your choice. You will be returned to the "Version Control" settings page.
+
+Changes to this setting are saved immediately.
+
+See also:
 
 - [Creating Workspaces](./creating.html) for more details about selecting a VCS repository.
 - [Connecting VCS Providers to Terraform Cloud](../vcs/index.html) for more details about configuring VCS integrations.

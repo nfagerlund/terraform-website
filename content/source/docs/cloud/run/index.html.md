@@ -11,7 +11,7 @@ This page describes the basics of how runs work in Terraform Cloud.
 
 ## Remote Operations
 
-Terraform Cloud is designed as an execution platform for Terraform, and can perform Terraform runs on its own disposable virtual machines.
+Terraform Cloud is designed as an execution platform for Terraform, and can perform Terraform runs on its own disposable virtual machines. This provides a consistent and reliable run environment, and enables advanced features like Sentinel policy enforcement, cost estimation, notifications, version control integration, and more.
 
 Terraform runs managed by Terraform Cloud are called _remote operations._ Remote runs can be initiated by webhooks from your VCS provider, by UI controls within Terraform Cloud, by API calls, or by Terraform CLI. When using Terraform CLI to perform remote operations, the progress of the run is streamed to the user's terminal, to provide an experience equivalent to local operations.
 

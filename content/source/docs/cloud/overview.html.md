@@ -32,7 +32,7 @@ This page is a brief overview of Terraform Cloud's features and how they fit tog
     - ...basically, this is all the stuff that you could already sort of tape together out of spare parts! except the remote backend stuff, that's secret sauce on our part.
 - Governance and control
     - teams and permissions
-        - plan/apply division
+        - plan/apply division, run approval
     - Sentinel policies
     - some access control is delegated to your VCS's merge permissions.
 - Insight

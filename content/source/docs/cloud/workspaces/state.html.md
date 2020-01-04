@@ -7,9 +7,15 @@ page_title: "Terraform State - Workspaces - Terraform Cloud"
 
 -> **API:** See the [State Versions API](../api/state-versions.html).
 
-Each workspace has its own separate state data. In order to read and write state for the correct workspace, Terraform Cloud overrides any configured [backend](/docs/backends/index.html) when running Terraform.
+Each Terraform Cloud workspace has its own separate state data, used for runs within that workspace.
 
-You can view current and historical state data for a workspace from its "States" tab. Each state in the list indicates which run and which VCS commit (if applicable) it was associated with. You can click a state in the list for more details, including a diff against the previous state and a link to the raw state file.
+In [remote runs](../run/index.html), Terraform Cloud automatically configures Terraform to use the workspace's state; the Terraform configuration does not need an explicit backend configuration. (If a backend configuration is present, it will be overridden.) In local runs, you can use a workspace's state by configuring [the `remote` backend](/docs/backends/types/remote.html).
+
+## State Versions
+
+In addition to the current state, Terraform Cloud retains historical _state versions,_ which can be used to analyze infrastructure changes over time.
+
+You can view a workspace's state versions from its "States" tab. Each state in the list indicates which run and which VCS commit (if applicable) it was associated with. Click a state in the list for more details, including a diff against the previous state and a link to the raw state file.
 
 ## Cross-Workspace State Access
 
@@ -38,4 +44,3 @@ resource "aws_instance" "redis_server" {
   subnet_id = "${data.terraform_remote_state.vpc.subnet_id}"
 }
 ```
-

@@ -3,7 +3,7 @@ layout: "cloud"
 page_title: "Creating Workspaces - Workspaces - Terraform Cloud"
 ---
 
-[remote operations]: ../run/index.html#remote-operations
+[remote operations]: ../run/index.html
 
 # Creating Workspaces
 
@@ -21,28 +21,28 @@ New workspaces can be created by:
 
 ## Configuring a New Workspace
 
-To create a new workspace, [navigate to the workspace list](./index.html#listing-and-filtering-workspaces), then click the "+ New Workspace" button (near the top of the page) to open the "Create a New Workspace" page.
+To create a new workspace:
 
-The "Create a New Workspace" page is split into three screens. Follow the instructions to configure the workspace's name and version control settings, then confirm creation.
+- [Navigate to the workspace list](./index.html#listing-and-filtering-workspaces) and click the "+ New Workspace" button (near the top of the page).
+- Follow the instructions to configure the workspace's VCS repository, or select "No VCS connection." Version control settings are explained in more detail below.
+- Choose a name for the workspace. The name must be unique within the organization, and can include letters, numbers, dashes (`-`), and underscores (`_`). See also our [advice for useful workspace names](./naming.html). The workspace name can be changed later.
+- Confirm creation.
+
+-> **Note:** For convenience, the "Create a New Workspace" page is split into three screens; the second screen is only used when
 
 ![Screenshot: The "create a new workspace" page, on the version control provider screen.](./images/creating-vcs-provider.png)
 
 ### About VCS Connections
 
-By default, new workspaces support [remote operations][], meaning that their Terraform runs occur within Terraform Cloud's own infrastructure. In order to perform Terraform runs, Terraform Cloud needs access to the workspace's Terraform configuration, and needs to receive updated configuration versions when the code changes.
+By default, new workspaces support [remote operations][], meaning that their Terraform runs occur within Terraform Cloud's own infrastructure. In order to perform Terraform runs, Terraform Cloud needs access to the workspace's Terraform configuration and needs to receive updated configuration versions when the code changes.
 
 Terraform Cloud offers two main ways to manage configuration versions:
 
 - **With a connected VCS repository.** Terraform Cloud can automatically retrieve code from supported VCS providers, and registers webhooks to get notified of code changes. This is the most convenient way to use Terraform Cloud. See [The UI- and VCS-driven Run Workflow](../run/ui.html) for more information.
-- **With other tools.** You can use Terraform CLI to upload configuration versions from any local machine, or you can use the API to build more sophisticated integrations. This isn't as convenient as a VCS connection (since Terraform Cloud can't automatically notice and react to code changes), but it lets you integrate Terraform Cloud into an existing CI pipeline or use it with an unsupported VCS provider. See [The CLI-driven Run Workflow](../run/cli.html) and [The API-driven Run Workflow](../run/api.html) for more information.
+- **With direct uploads.** You can use Terraform CLI to upload configuration versions from any local machine, or you can use the API to build integrations. This isn't as convenient as a VCS connection (since Terraform Cloud can't automatically notice and react to code changes), but it lets you integrate Terraform Cloud into an existing CI pipeline or use it with an unsupported VCS provider. See [The CLI-driven Run Workflow](../run/cli.html) and [The API-driven Run Workflow](../run/api.html) for more information.
 
 To connect a new workspace to a VCS repository, select your VCS provider and follow the instructions. To rely on Terraform CLI or the API for configuration versions, select "None".
 
-### Workspace Name
-
-Each new workspace needs a unique name within its organization. Names can include letters, numbers, dashes (`-`), and underscores (`_`). See also our [advice for useful workspace names](./naming.html). This name can be changed later.
-
-The name field is on the final screen of the new workspace page. If you chose to connect the workspace to a VCS repository, its name defaults to the repository's name.
 
 
 ### VCS Settings

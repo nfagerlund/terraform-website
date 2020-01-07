@@ -1,9 +1,9 @@
 ---
 layout: "cloud"
-page_title: "Managing Runs - Runs - Terraform Cloud"
+page_title: "Viewing and Managing Runs - Runs - Terraform Cloud"
 ---
 
-# Managing Runs
+# Viewing and Managing Runs
 
 Each workspace in Terraform Cloud includes a list of its current, pending, and historical runs. You can view information about these runs in the UI, and sometimes interact with them.
 

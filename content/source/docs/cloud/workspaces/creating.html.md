@@ -145,7 +145,7 @@ VCS-backed workspaces support several optional fields, which you can reveal by c
 
 - **Terraform working directory** — The directory where Terraform will execute, specified as a relative path from the root of the repo. This is useful when working with VCS repos that contain multiple Terraform configurations. Defaults to the root of the repo.
 
-- **Automatic run triggering** — If you specify a working directory, Terraform Cloud will by default only queue a plan for changes to the repository inside that working directory. You can override this behavior with these settings. See [Automatic Run Triggering](../workspaces/settings.html#automatic-run-triggering) settings for more details.
+- **Automatic run triggering** — If you specify a working directory, Terraform Cloud will by default only queue a plan for changes to the repository inside that working directory. You can override this behavior with these settings. See [Automatic Run Triggering](./vcs.html#automatic-run-triggering) settings for more details.
 
 ![Screenshot: Controlling run triggering for workspaces with working directory](./images/creating-options-filtering.png)
 

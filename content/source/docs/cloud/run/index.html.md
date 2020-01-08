@@ -17,7 +17,7 @@ Terraform runs managed by Terraform Cloud are called _remote operations._ Remote
 
 ### Disabling Remote Operations
 
-[execution_mode]: ./workspaces/settings.html#execution-mode
+[execution_mode]: ../workspaces/settings.html#execution-mode
 
 Remote operations can be disabled for any workspace by changing its ["Execution Mode" setting][execution_mode] to "Local". This causes the workspace to act only as a remote backend for Terraform state, with all execution occurring on your own workstations or continuous integration workers.
 

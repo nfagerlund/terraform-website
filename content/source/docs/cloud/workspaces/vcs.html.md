@@ -11,7 +11,7 @@ page_title: "VCS Connections - Workspaces - Terraform Cloud"
 
 Any Terraform Cloud workspace can be connected to a version control system (VCS) repository that contains its Terraform configuration. You can manage that connection in the "Version Control" page of each workspace's settings.
 
-## About Configuration Versions
+## About Configuration Versions and VCS Connections
 
 Each workspace is associated with a particular Terraform configuration. In order to perform [remote Terraform runs][remote operations] for a given workspace, Terraform Cloud needs access to its configuration. Since the configuration can change over time, Terraform Cloud also needs to get updated configuration versions when the code changes.
 

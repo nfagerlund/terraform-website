@@ -9,7 +9,7 @@ page_title: "VCS Connections - Workspaces - Terraform Cloud"
 [remote backend]: /docs/backends/types/remote.html
 [execution mode]: ./settings.html#execution-mode
 
-Any Terraform Cloud workspace can be connected to a version control system (VCS) repository that contains its Terraform configuration. You can manage that connection in the "Version Control" page of each workspace's settings.
+Any Terraform Cloud workspace can be connected to a version control system (VCS) repository that contains its Terraform configuration. You can assign a connection [when creating a workspace](./creating.html), and can modify that connection in the "Version Control" page of the workspace's settings.
 
 ## About Configuration Versions and VCS Connections
 
@@ -27,8 +27,6 @@ If a workspace's [execution mode is set to local][execution mode], it doesn't re
 ## Configuring VCS Connections
 
 -> **API:** See the [Update a Workspace endpoint](../api/workspaces.html#update-a-workspace) (`PATCH /organizations/:organization_name/workspaces/:name`).
-
-Workspaces are usually assigned a VCS connection [when they are created](./creating.html).
 
 To change the VCS settings for an existing workspace, choose "Version Control" from the workspace's "Settings" menu. The version control page includes the following settings:
 
@@ -49,15 +47,15 @@ Connecting or disconnecting a VCS repository occurs on a separate page, split in
 
 1. On the first screen, choose your VCS provider (or choose "No VCS connection" to disconnect the workspace from version control).
 
-    -> **Note:** If you haven't configured a VCS provider for your organization yet, choosing one here will prompt you to add that provider to your organization. See [Connecting VCS Providers](../vcs/index.html) for more information. Only organization owners can configure VCS providers.
+    -> **Note:** If you haven't added a VCS provider for your organization yet, choosing one here will prompt you to configure it. See [Connecting VCS Providers](../vcs/index.html) for more information. Only organization owners can configure VCS providers.
 
-2. On the second screen, choose a repository from a filterable list. This screen is skipped if you chose "No VCS connection".
+1. On the second screen, choose a repository from the filterable list. This screen is skipped if you chose "No VCS connection".
 
-    Some providers limit the size of this list. If the repository you want doesn't appear in the list, you can still connect a workspace to it; scroll to the bottom of the list, and enter the repository's ID in the text field.
+    Some VCS providers limit the list's size. If a repository isn't listed, you can still choose it by name; scroll to the bottom of the list and enter its ID in the text field.
 
-    -> **Note:** For some VCS providers, the repository list includes a drop-down menu for changing which VCS account's repositories are shown. Other providers combine all available accounts into a single list.
+    -> **Note:** For some VCS providers, this list includes a drop-down menu for changing which account's repositories are shown. Other providers combine all available accounts into a single list.
 
-3. On the third screen, confirm or cancel your choice. Confirmed changes will be saved immediately, and you will be returned to the "Version Control" settings page.
+1. On the third screen, confirm or cancel your choice. Confirmed changes will be saved immediately, and you will be returned to the "Version Control" settings page.
 
 See also:
 

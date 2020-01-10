@@ -14,7 +14,7 @@ Each new workspace needs a unique name, and needs to know where its Terraform co
 
 Most commonly, the configuration comes from a connected version control repository. If you choose not to connect a repository, you'll need to upload configuration versions for the workspace using Terraform CLI or the API.
 
-For more information about how configuration versions and connected repositories work, see [VCS Connections](./vcs.html).
+For more information about how configuration versions and connected repositories work, see [Terraform Configurations in Terraform Cloud Workspaces](./configurations.html).
 
 ## Required Permissions
 

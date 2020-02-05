@@ -17,7 +17,7 @@ page_title: "Overview of Features - Terraform Cloud"
 [modules]: todo
 [cost estimation]: todo
 
-Fundamentally, Terraform Cloud is _an execution platform that runs Terraform._ Unlike a general-purpose execution platform, it has deep integrations with Terraform's workflows and data formats, and it uses those integrations to make Terraform more convenient and more powerful.
+Fundamentally, Terraform Cloud is an execution platform that runs Terraform. Unlike a general-purpose execution platform, it has deep integrations with Terraform's workflows and data formats, and it uses those integrations to make Terraform more convenient and more powerful.
 
 This page is a brief overview of Terraform Cloud's features and how they fit together.
 
@@ -30,7 +30,7 @@ In its default state, Terraform CLI uses a local workflow, performing operations
 
 But working with a team requires a remote workflow — at minimum, state must be stored in a shared backend, and ideally Terraform should execute in a shared environment instead of on a random workstation. This makes it possible to share responsibilities, share awareness, and avoid single points of failure.
 
-Terraform Cloud offers a team-oriented remote Terraform workflow, designed to be comfortable for existing Terraform users and easily learnable for new users.
+Terraform Cloud offers a team-oriented remote Terraform workflow, designed to be comfortable for existing Terraform users and easily learnable for new users. The foundations of this workflow are remote Terraform execution, a workspace-based organizational model, version control integration, command-line integration, cross-workspace data sharing, and a private Terraform module registry.
 
 ### Remote Terraform Execution
 

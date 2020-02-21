@@ -28,9 +28,9 @@ Terraform Cloud runs [Terraform CLI][cli] to provision infrastructure.
 
 In its default state, Terraform CLI uses a local workflow, performing operations on the workstation where it is invoked and storing state in a local directory.
 
-But working with a team requires a remote workflow — at minimum, state must be stored in a shared backend, and ideally Terraform should execute in a shared environment instead of on a random workstation. This makes it possible to share responsibilities, share awareness, and avoid single points of failure.
+But working with a team requires a remote workflow, since teams need to share responsibilities, share awareness, and avoid single points of failure. At minimum state must be shared, and ideally Terraform should execute in a consistent shared environment instead of on a random workstation.
 
-Terraform Cloud offers a team-oriented remote Terraform workflow, designed to be comfortable for existing Terraform users and easily learnable for new users. The foundations of this workflow are remote Terraform execution, a workspace-based organizational model, version control integration, command-line integration, cross-workspace data sharing, and a private Terraform module registry.
+Terraform Cloud offers a team-oriented remote Terraform workflow, designed to be comfortable for existing Terraform users and easily learned by new users. The foundations of this workflow are remote Terraform execution, a workspace-based organizational model, version control integration, command-line integration, cross-workspace data sharing, and a private Terraform module registry.
 
 ### Remote Terraform Execution
 
@@ -100,6 +100,11 @@ Terraform CLI can already fetch modules from arbitrary VCS sources, but Terrafor
 
 The private registry uses your VCS as the source of truth, relying on Git tags to manage module versions. Just specify which repositories contain modules, and the registry handles the rest.
 
+### Full API
+
+Nearly all of Terraform Cloud's features are available in [its API](./api/index.html), making it easy to integrate any of its data with any other service. There's even [a Terraform provider based on that API](/docs/providers/tfe/index.html), so you can manage your Terraform Cloud teams and workspaces as a Terraform configuration.
+
+
 ## Insight
 
 Beyond the core Terraform workflow, Terraform Cloud offers powerful tools for insight into your infrastructure provisioning process.
@@ -123,10 +128,6 @@ For workspaces connected to a VCS repository, Terraform Cloud can run speculativ
 Each Terraform Cloud workspace retains historical state versions and a history of all Terraform runs.
 
 For workspaces connected to a VCS repository, the run history includes information about the commit that triggered the run, so you can correlate infrastructure changes and code changes long after the fact.
-
-### API
-
-Nearly all of Terraform Cloud's features are available in its JSON-based API, making it easy to integrate any of its data with any other service.
 
 
 ## Governance and Control

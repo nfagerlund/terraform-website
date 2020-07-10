@@ -7,6 +7,8 @@ page_title: "Enforce and Override Policies - Sentinel - Terraform Cloud and Terr
 
 -> **Note:** Sentinel policies are a paid feature, available as part of the **Team & Governance** upgrade package. [Learn more about Terraform Cloud pricing here](https://www.hashicorp.com/products/terraform/pricing/).
 
+> TKlearn https://learn.hashicorp.com/terraform/sentinel/sentinel-intro
+
 Once a policy is added to an organization it is enforced on all runs.
 
 The policy check will occur immediately after a plan is successfully executed in the run. If the plan fails, the policy check will not be performed. The policy check uses the generated tfplan file, [simulated apply object](./import/tfplan.html#resource-applied-field), state and configuration to verify the rules in each of the policies.

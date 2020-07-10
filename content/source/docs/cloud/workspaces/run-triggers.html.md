@@ -14,6 +14,8 @@ When used in conjunction with [`terraform_remote_state` data sources](/docs/prov
 -> **Guide:**: For a hands-on guide that will walk you through the process of creating and using a run trigger, see our [run triggers guide on
 learn.hashicorp.com](https://learn.hashicorp.com/terraform/tfc/tfc_run_triggers?utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS).
 
+> TKlearn(special) https://learn.hashicorp.com/terraform/tfc/tfc_run_triggers
+
 ## Viewing and Managing Run Triggers
 
 To add or delete a run trigger, navigate to the desired workspace and choose "Run Triggers" from the "Settings" menu:

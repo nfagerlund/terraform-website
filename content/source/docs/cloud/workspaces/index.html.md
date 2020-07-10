@@ -7,6 +7,8 @@ page_title: "Workspaces - Terraform Cloud and Terraform Enterprise"
 
 Workspaces are how Terraform Cloud organizes infrastructure.
 
+> TKlearn https://learn.hashicorp.com/terraform/cloud-getting-started/signup
+
 ## Workspaces are Collections of Infrastructure
 
 Working with Terraform involves managing collections of infrastructure resources, and most organizations manage many different collections.

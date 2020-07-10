@@ -18,6 +18,8 @@ Terraform Cloud is a platform that performs Terraform runs to provision infrastr
 
 This page is a brief overview of Terraform Cloud's features and how they fit together.
 
+> TKlearn https://learn.hashicorp.com/terraform/cloud-getting-started/signup
+
 ## Terraform Workflow
 
 Terraform Cloud runs [Terraform CLI][cli] to provision infrastructure.

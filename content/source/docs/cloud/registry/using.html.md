@@ -5,6 +5,8 @@ page_title: "Using Private Modules - Private Module Registry - Terraform Cloud a
 
 # Using Modules from the Terraform Cloud Private Module Registry
 
+> TKlearn https://learn.hashicorp.com/terraform/modules/using-modules
+
 By design, Terraform Cloud's private module registry works much like the [public Terraform Registry](/docs/registry/index.html). If you're already familiar with the public registry, here are the main differences:
 
 - Use Terraform Cloud's web UI to browse and search for modules.

@@ -9,6 +9,8 @@ page_title: "Overview - Cost Estimation - Terraform Cloud and Terraform Enterpri
 
 Terraform Cloud provides cost estimates for many resources found in your Terraform configuration. For each resource an hourly and monthly cost is shown, along with the monthly delta. The total cost and delta of all estimable resources is also shown.
 
+> TKlearn https://learn.hashicorp.com/terraform/cloud-getting-started/cost-estimation
+
 ## Enabling Cost Estimation
 
 To enable cost estimation for your organization, check the box in your organization's settings.

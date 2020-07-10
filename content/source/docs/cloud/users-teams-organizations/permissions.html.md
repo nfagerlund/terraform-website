@@ -9,6 +9,8 @@ page_title: "Permissions - Terraform Cloud and Terraform Enterprise"
 
 [permissions-citation]: #intentionally-unused---keep-for-maintainers
 
+> TKlearn https://learn.hashicorp.com/terraform/tfc/tfc_permissions
+
 Terraform Cloud's access model is team-based. In order to perform an action within a Terraform Cloud organization, users must belong to a team that has been granted the appropriate permissions.
 
 The permissions model is split into organization-level and workspace-level permissions. Additionally, every organization has a special team named "owners", whose members have maximal permissions within the organization.

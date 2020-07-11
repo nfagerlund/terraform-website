@@ -11,13 +11,13 @@ page_title: "CLI-driven Runs - Runs - Terraform Cloud and Terraform Enterprise"
 
 # The CLI-driven Run Workflow
 
+> For a hands-on tutorial, try the [Authenticate the CLI with Terraform Cloud](https://learn.hashicorp.com/terraform/tfc/tfc_login?utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS) guide on HashiCorp Learn.
+
 Terraform Cloud has three workflows for managing Terraform runs.
 
 - The [UI/VCS-driven run workflow](./ui.html), which is the primary mode of operation.
 - The [API-driven run workflow](./api.html), which is more flexible but requires you to create some tooling.
 - The CLI-driven run workflow described below, which uses Terraform's standard CLI tools to execute runs in Terraform Cloud.
-
-> TKlearn https://learn.hashicorp.com/terraform/tfc/tfc_login
 
 ## Summary
 

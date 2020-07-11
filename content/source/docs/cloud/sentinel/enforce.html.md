@@ -7,7 +7,7 @@ page_title: "Enforce and Override Policies - Sentinel - Terraform Cloud and Terr
 
 -> **Note:** Sentinel policies are a paid feature, available as part of the **Team & Governance** upgrade package. [Learn more about Terraform Cloud pricing here](https://www.hashicorp.com/products/terraform/pricing/).
 
-> TKlearn https://learn.hashicorp.com/terraform/sentinel/sentinel-intro
+> For a hands-on tutorial, try the [Enforce Policy with Sentinel](https://learn.hashicorp.com/terraform/sentinel/sentinel-intro?utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS) guide on HashiCorp Learn.
 
 Once a policy is added to an organization it is enforced on all runs.
 

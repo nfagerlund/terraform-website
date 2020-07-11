@@ -7,9 +7,9 @@ page_title: "Example Policies - Policies - Terraform Cloud and Terraform Enterpr
 
 -> **Note:** Terraform policies are a paid feature, available as part of the **Team & Governance** upgrade package. [Learn more about Terraform Cloud pricing here](https://www.hashicorp.com/products/terraform/pricing/).
 
-This page lists some example policies. These examples are not exhaustive, but they demonstrate some of the most common use cases of policies with Terraform Cloud. For more examples, see the [Governance section of the Terraform Guides repository](https://github.com/hashicorp/terraform-guides/tree/master/governance).
+> For a hands-on tutorial, try the [Enforce Policy with Sentinel](https://learn.hashicorp.com/terraform/sentinel/sentinel-intro?utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS) guide on HashiCorp Learn.
 
-> TKlearn https://learn.hashicorp.com/terraform/sentinel/sentinel-intro
+This page lists some example policies. These examples are not exhaustive, but they demonstrate some of the most common use cases of policies with Terraform Cloud. For more examples, see the [Governance section of the Terraform Guides repository](https://github.com/hashicorp/terraform-guides/tree/master/governance).
 
 ~> **Important:** These examples are a demonstration of the Sentinel policy language and its features. They should not be used verbatim in your Terraform Cloud organization. Make sure you fully understand the intent and behavior of a policy before relying on it in production.
 
